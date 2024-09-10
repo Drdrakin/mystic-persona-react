@@ -1,11 +1,19 @@
 # Mystica 🔮
-Mystica é uma plataforma web construída em React, alimentada por uma API em Node.js com Express para a finalidade de criação de avatares dinâmicos !
-## Inspiração 🐤
-A inspiração desse projeto vem dos sistemas de criação de personagem de jogos Dress Up Princess, cujo objetivo é criar personagens apenas para apreciá-los ou competir
-quemconsegue fazer o mais interessante. <br/>
-A aplicação Mystica teria seu foco em criar avatares modulares que possam ser utilizados em outros contextos, como fotos de perfil.
+Mystica is a web platform built with React, powered by a Node.js Express API for the purpose of creating dynamic avatars !
 
-O objetivo do Avatar é representar o usuário, porém sem exibir seu rosto para situações onde a privacidade é desejada, como quase todos lugares informais na internet!
-## Modularização
-A criação de avatares funcionará de forma modular, o que significa que diversas opções diferentes podem ser combinadas, para um numero constantemente crescente
-de opções de avatares!
+## Inspiration 🐤
+The inspiration for this project comes from the character creation systems in Dress Up Princess games, where the goal is to create characters either just to enjoy them or to compete to see who can make the most interesting one. <br/>
+The Mystica application focus on creating modular avatars that can be used in other contexts, such as profile pictures, banners and representation of the person itself that made it.
+
+**The goal of the avatar is to represent the user**, while avoiding showing their face for situations where privacy is desired, such as in most informal places on the internet, you surely do not want
+to share your appearance with just anyone, right?
+
+## Modularization 👖 🧥 😜
+Avatar creation will work in a modular fashion, meaning that various different options can be combined to create an increasingly large number of possibilities with each new part added!
+
+This enables for the creation for the creation of (almost) endless possibilities of customization with just a few componentes !
+
+The concept is simple: parts will be pre-selected in the application's database, and the user will be able to choose any combination of them to create their avatar, as well as upload custom backgrounds.
+
+## Why ❓
+Mystica is a personal project made to learn, my purpose with this app is to understand better and delving deep in image rendering and manipulation, and also noSQL databases! Which is a must have for this project! 
