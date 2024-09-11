@@ -1,14 +1,14 @@
 import { Box, Text } from "@chakra-ui/react"
 import styles from './Header.module.css'
 import HomeDrawer from "../HomeDrawer"
+import { Link } from "react-router-dom";    
 
 const Header = () => {
     return (
         <Box className={styles.HeaderBody}>
             <HomeDrawer as='button'/>
-            <Text as="h2">Home</Text>
-            <Text as="h2">Build Avatar</Text>
-            <Text as="h2"></Text>
+            <Link to='/'className={styles.HeaderLink}>Home</Link>
+            <Link to='/register' className={styles.HeaderLink}>Build Avatar</Link>
         </Box>
     )
 }
