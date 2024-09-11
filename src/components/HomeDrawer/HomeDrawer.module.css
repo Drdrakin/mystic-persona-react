@@ -1,3 +1,22 @@
 p {
     margin-bottom: 1em;
 }
+
+.ButtonDrawer {
+    display: flex;
+}
+
+.ButtonDrawer button{
+    justify-content: center;
+    align-items: center;
+}
+
+.DrawerText ul :first-child{
+    margin-top: 1em !important;
+}
+
+.DrawerText p {
+    color: #000;
+    font-size: large;
+    font-weight: 500;
+}

@@ -1,5 +1,20 @@
 .HeaderBody {
-    color: purple;
-    width: 100vh;
-    
+    display: flex !important;
+    background-color:#805AD5 !important;
+    width: 3    00vh;
+    height: 10vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    top: 0;
+}
+
+.HeaderBody button {
+    margin: auto 0;
+}
+
+.HeaderBody h2 {
+    font-size: 2.7em;
+    margin: auto 0;
+    color: #fff;
+    padding-right: 1em;
 }

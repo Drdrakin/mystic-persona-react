@@ -1,11 +1,13 @@
 import { Box, FormControl, FormLabel } from "@chakra-ui/react"
-import HomeDrawer from "../../components/HomeDrawer"
+import Header from "../../components/Header"
+import Card from "../../components/Card"
 
 const Home = () => {
 
     return(
         <Box>
-            <HomeDrawer/>
+            <Header />
+            <Card />
         </Box>
     )
 }
