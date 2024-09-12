@@ -25,6 +25,7 @@ const Home = () => {
                     btnColor={'#805AD5'}
                     cardImage='/logo_small.png'
                     cardBtn='Create'
+                    pageLink='/register'
                 />
             </Box>
         </Box>

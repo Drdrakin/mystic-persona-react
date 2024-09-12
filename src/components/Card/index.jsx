@@ -1,6 +1,8 @@
 import { Card, CardBody, Image, Stack, Heading, Text, CardFooter, Button } from "@chakra-ui/react"
+import { Link } from "react-router-dom";
+import styles from './Card.module.css'
 
-const HomeCard = ({ cardImage, cardTitle, cardText, cardBtn, btnColor, btnMargin, btnSize, btnFontSize,...props }) => {
+const HomeCard = ({ cardImage, cardTitle, cardText, cardBtn, btnColor, btnMargin, btnSize, btnFontSize, pageLink, ...props }) => {
     return(
         <Card
             direction={{ base: 'column', sm: 'column' }}
@@ -27,11 +29,19 @@ const HomeCard = ({ cardImage, cardTitle, cardText, cardBtn, btnColor, btnMargin
                             </Text>
                     </CardBody>
                 )}
-
                 <CardFooter>
-                    <Button variant='solid' bg={btnColor} color={'#fff'} margin={btnMargin} w={btnSize} h={btnSize / 6} fontSize={btnFontSize}>
-                        {cardBtn}
-                    </Button>
+                    {/* Renderizar condicionalmente, leitura: se pageLink for true(tem conteudo) carrega isso 
+                    se não(:) carrega isso*/}
+                    {  pageLink ?
+                        <Link to={pageLink} className={styles.buttonLink}>
+                            <Button variant='solid' bg={btnColor} color={'#fff'} margin={btnMargin} w={btnSize} h={btnSize / 6} fontSize={btnFontSize}>
+                                {cardBtn}
+                            </Button>
+                        </Link>
+                        :
+                        <Button variant='solid' bg={btnColor} color={'#fff'} margin={btnMargin} w={btnSize} h={btnSize / 6} fontSize={btnFontSize}>
+                        </Button> 
+                    }
                 </CardFooter>
             </Stack>
         </Card>

@@ -26,7 +26,7 @@ const LoginForm = () => {
                 </FormControl>
 
                 <Button type="submit" className={styles.submitButton}>
-                    Register
+                        Register
                 </Button>
             </form>
         </Box>
