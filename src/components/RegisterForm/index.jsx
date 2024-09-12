@@ -1,4 +1,4 @@
-import { Box, FormControl, FormLabel, Input, Button, Text } from "@chakra-ui/react";
+import { Box, FormControl, FormLabel, Input, Button, Text, color } from "@chakra-ui/react";
 import styles from './RegisterForm.module.css';
 
 const LoginForm = () => {
@@ -25,7 +25,15 @@ const LoginForm = () => {
                     <Input id="repassword" type="repassword" className={styles.inputField} />
                 </FormControl>
 
-                <Button type="submit" className={styles.submitButton}>
+                <Button 
+                    type="submit" 
+                    className={styles.submitButton}
+                    _hover={{
+                        bg: 'purple'
+                       
+                    }}    
+                >
+
                         Register
                 </Button>
             </form>

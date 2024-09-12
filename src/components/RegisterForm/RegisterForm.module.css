@@ -41,7 +41,7 @@
     border-radius: 5px;
     font-size: 1.5em !important;
     background-color: #ecc94b !important;
-    color: white !important;
+    color: 363636 !important;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -49,5 +49,6 @@
 }
 
 .submitButton:hover {
-    background-color: #2c5282;
+    background-color: #FAF089  !important;
+    color: #363636 !important;
 }
