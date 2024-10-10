@@ -16,4 +16,4 @@ This enables for the creation for the creation of (almost) endless possibilities
 The concept is simple: parts will be pre-selected in the application's database, and the user will be able to choose any combination of them to create their avatar, as well as upload custom backgrounds.
 
 ## Why ❓
-Mystica is a personal project made to learn, my purpose with this app is to understand better and delving deep in image rendering and manipulation, and also noSQL databases! Which is a must have for this project! 
+Mystica is a personal project made to learn and deepen my skills, my purpose with this app is to better understand and delve deep in image rendering and manipulation and also noSQL databases! Which is a must have for this project! 
