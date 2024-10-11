@@ -6,8 +6,9 @@ import styles from './Register.module.css'
 const index = () => {
   return (
     <>
-      <Box className={styles.registerContainer}>
+      <Box className={styles.loginContainer}>
         <Header />
+        <Text as="h2">Register Yourself</Text>
         <RegisterForm />
       </Box>
     </>
