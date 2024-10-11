@@ -1,6 +1,7 @@
 import { Box, FormControl, FormLabel, Input, Button, Text, useToast } from "@chakra-ui/react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import api from "../../api";
 import styles from './LoginForm.module.css';
 
 const LoginForm = () => {
@@ -14,6 +15,7 @@ const LoginForm = () => {
         e.preventDefault();
     
         try {
+
           const requestData = {
             email: email,
             password: password
@@ -21,7 +23,7 @@ const LoginForm = () => {
     
           const response = await api.post('/users/login', requestData)
     
-          if (response.status === 201) {
+          if (response.status === 200) {
             toast({
                 size: 20,
                 title: 'Successfully Logged',
@@ -30,7 +32,7 @@ const LoginForm = () => {
                 isClosable: true,
             });
           }
-          navigate('/home')
+          navigate('/')
         } catch (error) {
           const errorMessage = error.response?.data?.message || "Internal Server Error";
           toast({
