@@ -11,7 +11,7 @@ to share your appearance with just anyone, right?
 ## Modularization 👖 🧥 😜
 Avatar creation will work in a modular fashion, meaning that various different options can be combined to create an increasingly large number of possibilities with each new part added!
 
-This enables for the creation for the creation of (almost) endless possibilities of customization with just a few componentes !
+This enables for the creation of (almost) endless possibilities of customization with just a few componentes !
 
 The concept is simple: parts will be pre-selected in the application's database, and the user will be able to choose any combination of them to create their avatar, as well as upload custom backgrounds.
 
