@@ -76,14 +76,13 @@ const LoginForm = () => {
                     className={styles.submitButton}
                     onClick={handleSubmit}
                     _hover={{
-                        bg: 'purple'
-                       
+                        bg: 'purple'   
                     }}    
                 >
                     Login
                 </Button>
                 <Text className={styles.account} as="h4">Don't have an account yet?</Text>
-                <Link to="/">
+                <Link to="/register">
                     <Text className={styles.register} as="h4">Create here</Text>
                 </Link>
             </form>

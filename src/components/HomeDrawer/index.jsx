@@ -6,11 +6,13 @@ import {
     DrawerContent,
     useDisclosure,
     Button,
-    Box
+    Box,
+    Text
   } from '@chakra-ui/react'
 import { ArrowBackIcon } from '@chakra-ui/icons'
 import React from 'react'
 import styles from './HomeDrawer.module.css'
+import { Link } from 'react-router-dom'
 
   const HomeDrawer = () =>{
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -26,7 +28,9 @@ import styles from './HomeDrawer.module.css'
             <DrawerHeader bg='#805AD5' color='#fff' justifyContent='center' alignItems={'center'} fontSize='xxx-large' borderBottomWidth='1px'>Mystica 🔮</DrawerHeader>
             <DrawerBody as='ul'>
               <p>My Avatars</p>
-              <p>Create New Avatar</p>
+              <Link to={'/creation'}>
+                <Text as='p'>Create New Avatar</Text>
+              </Link>
               <p>Account Settings</p>
             </DrawerBody>
           </DrawerContent>

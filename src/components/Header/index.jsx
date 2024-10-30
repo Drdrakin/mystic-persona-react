@@ -8,7 +8,7 @@ const Header = () => {
         <Box className={styles.HeaderBody}>
             <HomeDrawer as='button'/>
             <Link to='/'className={styles.HeaderLink}>Home</Link>
-            <Link to='/register' className={styles.HeaderLink}>Build Avatar</Link>
+            <Link to='/creation' className={styles.HeaderLink}>Build Avatar</Link>
         </Box>
     )
 }
