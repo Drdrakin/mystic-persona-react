@@ -1,0 +1,25 @@
+.text{
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 0.3em !important;
+}
+
+.buttonsImage{
+    display: flex;
+    justify-content: right;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+}
+
+.buttonsImage button{
+    width: 5em;
+    margin-left: 1em;
+    color: #fff;
+    background-color: #f35f4b;
+}
+
+.buttonsImage button:last-child{
+    width: 5em;
+    margin-left: 1em;
+    background-color: #e6cf00;
+}

@@ -36,7 +36,7 @@
     border-radius: 8px;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 85%;
     padding-bottom: 500px;
 }
 
@@ -88,4 +88,8 @@
 .componentItem:hover {
     background-color: #e2e8f0;
 }
-  
+
+.scrollView{
+    max-height: 600px;
+    overflow-y: auto;
+}

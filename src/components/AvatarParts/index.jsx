@@ -5,7 +5,7 @@ import AvatarPartImage from "./AvatarPartImage";
 import styles from './AvatarParts.module.css';
 
 const AvatarComponents = () => {
-    const [selectedCategory, setSelectedCategory] = useState('Hat');
+    const [selectedCategory, setSelectedCategory] = useState('Glasses');
     const [components, setComponents] = useState([]);
     const [categories, setCategories] = useState([]);
 

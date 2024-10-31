@@ -14,7 +14,9 @@ const Avatar = () => {
         <Box className={styles.avatarCreationBox}>
           <Text as="h4">Avatar Creation Area (Coming Soon)</Text>
         </Box>
-        <AvatarComponents />
+        <Box className={styles.scrollView}>
+          <AvatarComponents />
+        </Box>
       </Box>
     </Box>
   );
