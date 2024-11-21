@@ -17,3 +17,9 @@ The concept is simple: parts will be pre-selected in the application's database,
 
 ## Why ❓
 Mystica is a personal project made to learn and deepen my skills, my purpose with this app is to better understand and delve deep in image rendering and manipulation and also noSQL databases! Which is a must have for this project! 
+
+## Planning and Development
+
+To better prepare for building this website, I created a figma Flow Chart that specifies the pages and componentes that will be included from the users perspective, with the objective of planning a better user experience navigating the application, and also to avoid problems later on due to poor planning.
+
+[Flow Chart](https://www.figma.com/board/VknwcsGtJ4rMERnvMBr5xl/Flow-chart-(Community)?node-id=0-1&node-type=canvas&t=scEGrwU5CpAyDkDx-0) on figma
