@@ -1,61 +1,61 @@
 import React from "react";
-import { Box, Heading, Text, Button, Flex, Image, Link } from "@chakra-ui/react";
+import { Box, Heading, Text, Button, Flex, Image, VStack } from "@chakra-ui/react";
 import styles from "./LandingPage.module.css";
 
 const LandingPage = () => {
   return (
     <Box className={styles.landingPage}>
-      <Box className={styles.header}>
-        <Heading as="h1">Mystica 🔮</Heading>
-        <Text>Create dynamic, modular avatars for any purpose!</Text>
-        <Button
-          className={styles.ctaButton}
-          onClick={() => alert("Get Started")}
-        >
-          Get Started
-        </Button>
-      </Box>
-
-      <Flex className={styles.section}>
-        <Image
-          src="logo_small.png"
-          alt="Inspiration"
-          className={styles.image}
-        />
-        <Box className="text-container">
-          <Heading as="h2">Inspiration</Heading>
-          <Text>
-            Mystica draws inspiration from character creation systems in Dress
-            Up Princess games, aiming to provide users with endless
-            possibilities for modular avatar customization.
+      <Flex className={styles.header}>
+        <VStack align="start" spacing={5} maxW="600px">
+          <Heading as="h1" size="2xl" className={styles.title}>
+            Mystica 🔮
+          </Heading>
+          <Text className={styles.subheading}>
+            Create dynamic, modular avatars and unlock endless possibilities!
           </Text>
-        </Box>
+          <Button className={styles.ctaButton} onClick={() => alert("Get Started")}>
+            Get Started
+          </Button>
+        </VStack>
+        <Image src="faltando.png" alt="Hero" className={styles.heroImage} />
       </Flex>
 
-      <Flex className={`${styles.section} ${styles.alternate}`}>
-        <Image
-          src=""
-          alt="Modularization"
-          className={styles.image}
-        />
-        <Box className="text-container">
-          <Heading as="h2">Modularization</Heading>
-          <Text>
-            Combine various options to create unique avatars. Each new part adds
-            countless possibilities, ensuring endless customization
-            opportunities!
-          </Text>
-        </Box>
-      </Flex>
-
-      <Box className={styles.why}>
-        <Heading as="h2">Why Mystica</Heading>
-        <Text>
-          Mystica is a personal project to deepen skills in image rendering,
-          manipulation, and NoSQL databases. The perfect blend of learning and
-          creativity!
-        </Text>
+      <Box className={styles.stepSection}>
+        <Heading as="h2" size="lg" textAlign="center" mb={10}>
+          How It Works
+        </Heading>
+        <Flex className={styles.stepFlow}>
+          <Box className={styles.step}>
+            <Image src="faltando.png" alt="Step 1" className={styles.stepImage} />
+            <Heading as="h3" size="md">Choose a Base</Heading>
+            <Text>Create your avatar starting from a diverse set of bases.</Text>
+          </Box>
+          <Box className={styles.step}>
+            <Image src="faltando.png" alt="Step 2" className={styles.stepImage} />
+            <Heading as="h3" size="md">Customize</Heading>
+            <Text>Select outfits, accessories, and features to personalize.</Text>
+          </Box>
+          <Box className={styles.step}>
+            <Image src="faltando.png" alt="Step 3" className={styles.stepImage} />
+            <Heading as="h3" size="md">Export</Heading>
+            <Text>Download your avatar for profiles, banners, and more.</Text>
+          </Box>
+        </Flex>
       </Box>
+
+      <Flex className={styles.benefitsSection}>
+        <Image src="faltando.png" alt="Benefits" className={styles.benefitsImage} />
+        <VStack align="start" spacing={4} className={styles.benefitsContent}>
+          <Heading as="h2" size="lg">Why Choose Mystica?</Heading>
+          <Text>
+            Mystica offers privacy-friendly avatar creation with limitless customization,
+            perfect for both fun and professional use cases.
+          </Text>
+          <Button className={styles.secondaryButton} onClick={() => alert("Learn More")}>
+            Learn More
+          </Button>
+        </VStack>
+      </Flex>
     </Box>
   );
 };
