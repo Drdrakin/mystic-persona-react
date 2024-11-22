@@ -8,9 +8,10 @@ const NavBar = () => {
       <VStack spacing={4} align="start" mt={10}>
         <Text className={styles.placeholder}>[User Info Placeholder]</Text>
         <Text className={styles.placeholder}>[Recent Visits Placeholder]</Text>
+        
         <Text className={styles.navItem}>Documentation</Text>
         <Text className={styles.navItem}>FAQs</Text>
-        <Text className={styles.navItem}>About</Text>
+        <Text className={styles.navItem}>About the Creator</Text>
       </VStack>
     </Box>
   );

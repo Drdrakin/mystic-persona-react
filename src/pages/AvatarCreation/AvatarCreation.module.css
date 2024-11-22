@@ -1,95 +1,89 @@
-.homeContainer {
+.mainContent {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-  }
+    background-color: #f9f9f9;
+}
   
-.homeContainer img {
-    margin: 0 auto;
-    max-width: 600px;
-    width: 100%;
-    object-fit: cover;
-    height: auto;
-}
-
-.homeContainer h3 {
-    padding-top: 0.2em;
-    font-size: 3.5em;
-    text-align: center;
-}
-
-.homeContainer p {
-    padding-top: 1em;
-    font-size: 1.5em;
-    text-align: center;
-}
-
-.mainContent {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.avatarCreationBox {
-    display: flex;
-    border: 2px dashed #ccc;
-    border-radius: 8px;
-    justify-content: center;
-    align-items: center;
-    width: 85%;
-    padding-bottom: 500px;
-}
-
-.avatarCreationBox h4 {
-    text-align: center;
-    font-size: 1.5em;
-}
-
-.componentContainer {
+.creationArea {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
 }
-
-.categoryButtons {
-    display: flex;
-    justify-content: center;
+  
+.pageTitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #6a0dad;
     margin-bottom: 20px;
-    gap: 10px;
 }
-
-.activeButton {
-    background-color: #6b46c1;
-    color: white;
-    transition: background-color 0.3s ease;
-}
-
-.inactiveButton {
-    background-color: #e2e8f0;
-    color: #4a5568;
-    transition: background-color 0.3s ease;
-}
-
-.componentGrid {
-    width: 100%;
-}
-
-.componentItem {
+  
+.creationSections {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+  
+.selectorSection {
+    flex: 1;
+    margin-right: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+  
+.selectorContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+  
+.partSelector {
+    flex: 1;
+    min-width: 150px;
+}
+  
+.partLabel {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+  
+.previewSection {
+    flex: 1;
+    margin-left: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+  
+.avatarPreview {
+    height: 300px;
+    display: flex;
     align-items: center;
-    background-color: #edf2f7;
-    border-radius: 8px;
-    padding: 10px;
-    transition: background-color 0.3s ease;
+    justify-content: center;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    border: 2px dashed #ccc;
+}
+  
+.avatarImage{
+    object-fit: cover;
 }
 
-.componentItem:hover {
-    background-color: #e2e8f0;
+.saveButton{
+    background-color: #6a0dad !important;
+    color: #fff !important;
+    margin-top: 2em;
 }
 
-.scrollView{
-    max-height: 600px;
-    overflow-y: auto;
+.saveButton:hover{
+    background-color: #520986 !important;
 }
