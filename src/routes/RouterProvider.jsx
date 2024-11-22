@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "../pages/Home";
+import Landing from "../pages/Landing";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import AvatarCreation from '../pages/AvatarCreation'
@@ -7,7 +7,7 @@ import AvatarCreation from '../pages/AvatarCreation'
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Home/>
+        element: <Landing/>
     },
     {
         path: "/register",
