@@ -1,3 +1,49 @@
-.buttonLink {
-    margin: auto;
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
+  
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+  
+.cardImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+  
+.cardTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+  
+.cardDescription {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+  
+.cardButton {
+    background-color: #6a0dad !important;
+    color: white !important;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+  
+  .cardButton:hover {
+    background-color: #540a9d !important;
+}
+  

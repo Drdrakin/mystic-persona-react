@@ -1,0 +1,37 @@
+.navBar {
+    width: 250px;
+    background-color: #f4f4f4;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+  
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6a0dad;
+    margin-bottom: 20px;
+}
+  
+.navItem {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+  
+.navItem:hover {
+    color: #6a0dad;
+}
+  
+.placeholder {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #999;
+    font-style: italic;
+}
+  

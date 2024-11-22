@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Heading, Text, Button, Flex, Image, VStack } from "@chakra-ui/react";
 import styles from "./LandingPage.module.css";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
@@ -13,9 +14,11 @@ const LandingPage = () => {
           <Text className={styles.subheading}>
             Create dynamic, modular avatars and unlock endless possibilities!
           </Text>
-          <Button className={styles.ctaButton} onClick={() => alert("Get Started")}>
-            Get Started
-          </Button>
+          <Link to={'/home'}>
+            <Button className={styles.ctaButton}>
+              Get Started
+            </Button>
+          </Link>
         </VStack>
         <Image src="faltando.png" alt="Hero" className={styles.heroImage} />
       </Flex>

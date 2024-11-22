@@ -1,16 +1,18 @@
-import { Box, Text } from "@chakra-ui/react"
-import styles from './Header.module.css'
-import HomeDrawer from "../HomeDrawer"
-import { Link } from "react-router-dom";    
+import React from "react";
+import { Flex, Box, Text, Button } from "@chakra-ui/react";
+import styles from "./Header.module.css";
 
 const Header = () => {
-    return (
-        <Box className={styles.HeaderBody}>
-            <HomeDrawer as='button'/>
-            <Link to='/'className={styles.HeaderLink}>Home</Link>
-            <Link to='/creation' className={styles.HeaderLink}>Build Avatar</Link>
-        </Box>
-    )
-}
+  return (
+    <Flex as="header" className={styles.header}>
+      <Text className={styles.logo}>Mystica</Text>
+      <Flex className={styles.navLinks}>
+        <Button variant="link" onClick={() => alert("Go to Home")}>Home</Button>
+        <Button variant="link" onClick={() => alert("Go to Closet")}>Closet</Button>
+        <Button variant="link" onClick={() => alert("Go to Create")}>Create</Button>
+      </Flex>
+    </Flex>
+  );
+};
 
 export default Header;

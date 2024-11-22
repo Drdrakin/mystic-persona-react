@@ -1,0 +1,61 @@
+.homePage {
+    display: flex;
+    height: 100vh;
+}
+
+.navBar {
+    width: 250px;
+    background: #f9f9f9;
+    padding: 20px;
+}
+
+.contentArea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #6a0dad;
+    color: white;
+}
+
+.mainSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.cardImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cardTitle {
+    margin: 10px 0;
+}
+
+.cardDescription {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.cardButton {
+    background: #6a0dad;
+    color: white;
+    margin-top: 10px;
+}
