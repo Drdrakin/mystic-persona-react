@@ -13,77 +13,75 @@ const LoginForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-    
-        try {
 
-          const requestData = {
-            email: email,
-            password: password
-          };
-    
-          const response = await api.post('/users/login', requestData)
-    
-          if (response.status === 200) {
+        try {
+            const requestData = {
+                email: email,
+                password: password
+            };
+
+            const response = await api.post('/users/login', requestData);
+
+            if (response.status === 200) {
+                toast({
+                    title: 'Successfully Logged In',
+                    status: 'success',
+                    duration: 5000,
+                    isClosable: true,
+                });
+            }
+            navigate('/');
+        } catch (error) {
+            const errorMessage = error.response?.data?.message || "Internal Server Error";
             toast({
-                size: 20,
-                title: 'Successfully Logged',
-                status: 'success',
+                title: 'Error!',
+                description: errorMessage,
+                status: 'error',
                 duration: 5000,
                 isClosable: true,
             });
-          }
-          navigate('/')
-        } catch (error) {
-          const errorMessage = error.response?.data?.message || "Internal Server Error";
-          toast({
-            title: 'Error!',
-            description: errorMessage,
-            status: 'error',
-            duration: 5000,
-            isClosable: true,
-          });
         }
-      };
+    };
 
     return (
         <Box className={styles.formContainer}>
             <form>
-
                 <FormControl className={styles.formControl}>
-                    <FormLabel htmlFor="email" className={styles.formLabel}>Email</FormLabel>
-                    <Input 
-                        id="email" 
-                        type="email" 
+                    <FormLabel htmlFor="email" className={styles.formLabel}>
+                        Email
+                    </FormLabel>
+                    <Input
+                        id="email"
+                        type="email"
                         className={styles.inputField}
                         value={email}
-                        onChange={(e) => setEmail(e.target.value)} 
+                        onChange={(e) => setEmail(e.target.value)}
                     />
                 </FormControl>
 
                 <FormControl className={styles.formControl}>
-                    <FormLabel htmlFor="password" className={styles.formLabel}>Password</FormLabel>
-                    <Input 
-                        id="password" 
-                        type="password" 
+                    <FormLabel htmlFor="password" className={styles.formLabel}>
+                        Password
+                    </FormLabel>
+                    <Input
+                        id="password"
+                        type="password"
                         className={styles.inputField}
                         value={password}
-                        onChange={(e) => setPassword(e.target.value)} 
+                        onChange={(e) => setPassword(e.target.value)}
                     />
                 </FormControl>
 
-                <Button 
-                    type="submit" 
+                <Button
+                    type="submit"
                     className={styles.submitButton}
                     onClick={handleSubmit}
-                    _hover={{
-                        bg: 'purple'   
-                    }}    
                 >
                     Login
                 </Button>
-                <Text className={styles.account} as="h4">Don't have an account yet?</Text>
+                <Text className={styles.account}>Don't have an account yet?</Text>
                 <Link to="/register">
-                    <Text className={styles.register} as="h4">Create here</Text>
+                    <Text className={styles.register}>Create here</Text>
                 </Link>
             </form>
         </Box>

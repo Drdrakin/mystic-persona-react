@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import AvatarCreation from '../pages/AvatarCreation'
+import AvatarCloset from "../pages/AvatarCloset";
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
     {
         path: "/creation",
         element: <AvatarCreation/>
+    },
+    {
+        path: "/closet",
+        element: <AvatarCloset/>
     }
 ]) 
 

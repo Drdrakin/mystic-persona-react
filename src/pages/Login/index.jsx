@@ -1,19 +1,27 @@
+import React from "react";
+import { Box, Flex, Text } from "@chakra-ui/react";
+import NavBar from "../../components/NavBar";
 import Header from "../../components/Header";
-import LoginForm from "../../components/LoginForm";
-import { Text, Box } from "@chakra-ui/react";
-import styles from './Login.module.css'
+import styles from "./Login.module.css";
+import LoginForm from "../../components/LoginForm"
 
-const index = () => {
+const Login = () => {
   return (
-    <>
-      <Box className={styles.registerContainer}>
+    <Flex className={styles.homePage}>
+      <NavBar />
+
+      <Box className={styles.contentArea}>
         <Header />
-        <Text as="h2">Log-in your Account</Text>
-        <LoginForm />
 
+        <Text className={styles.pageTitle}>Login to your Account</Text>
+        
+        <Box className={styles.mainSection}>
+  
+          <LoginForm/>        
+        </Box>
       </Box>
-    </>
-  )
-}
+    </Flex>
+  );
+};
 
-export default index;
+export default Login;

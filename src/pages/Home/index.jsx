@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import NavBar from "../../components/NavBar";
 import Header from "../../components/Header";
 import Card from "../../components/Card";
@@ -13,7 +13,10 @@ const Home = () => {
       <Box className={styles.contentArea}>
         <Header />
 
+        <Text className={styles.pageTitle}>Explore</Text>
+        
         <Box className={styles.mainSection}>
+
           <Card
             image="/avatar-preview1.png"
             title="Avatar Preview"

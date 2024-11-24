@@ -1,73 +1,64 @@
 .formContainer {
-    width: 25vw;
-    margin: 0 auto;
-    margin-top: 1.5em;
-    padding: 2rem;
+    width: 350px;
+    margin: 50px auto;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    background-color: #805AD5;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .formControl {
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
 }
 
 .formLabel {
-    margin-bottom: 0.5rem;
-    color: #fff;
-    font-weight: 600 !important;
-    font-size: 1.2em !important;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4A5568 !important;
 }
 
 .inputField {
     width: 100%;
-    padding: 0.75rem;
+    padding: 10px;
+    border: 1px solid #CBD5E0 !important;
     border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    background-color: white !important;
+    transition: border-color 0.3s ease;
 }
 
 .inputField:focus {
-    border-color: #3182ce; 
+    border-color: #6B46C1 !important;
     outline: none;
 }
 
 .submitButton {
     width: 100%;
-    padding: 0.75rem;
+    padding: 12px 20px;
+    background-color: #4A5568 !important;
+    color: white !important;
+    font-weight: bold;
     border-radius: 5px;
-    font-size: 1.5em !important;
-    background-color: #ecc94b !important;
-    color: 363636 !important;
-    border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 1em;
+    transition: background-color 0.3s ease;
 }
 
 .submitButton:hover {
-    background-color: #FAF089  !important;
-    color: #363636 !important;
+    background-color: #6B46C1 !important;
 }
 
-.account{
+.account {
+    margin-top: 15px;
     text-align: center;
-    font-size: 1.1em;
-    padding-top: 1em;
-    color: #fff;
+    color: #2D3748;
 }
 
-.register{
-    font-size: 1.1em;
-    padding-top: 0.5em;
-    color: #fff;
+.register {
     text-align: center;
-    margin: 0 auto;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #6B46C1 !important;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .register:hover {
-    color: #000;
-    font-weight: 600;
-    cursor: pointer;
+    color: #9B2C2C !important;
 }
