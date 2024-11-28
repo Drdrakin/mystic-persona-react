@@ -13,7 +13,7 @@ const Home = () => {
       <Box className={styles.contentArea}>
         <Header />
 
-        <Text className={styles.pageTitle}>Explore</Text>
+        <Text className={styles.pageTitle}>Explore your Options</Text>
         
         <Box className={styles.mainSection}>
 

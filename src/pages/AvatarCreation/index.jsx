@@ -9,7 +9,7 @@ const AvatarCreation = () => {
   const [head, setHead] = useState("");
   const [eyes, setEyes] = useState("");
   const [mouth, setMouth] = useState("");
-  const [previewImage, setPreviewImage] = useState("/placeholder-avatar.png");
+  const [previewImage, setPreviewImage] = useState("");
   const [avatarParts, setAvatarParts] = useState([]);
 
   useEffect(() => {
@@ -24,31 +24,25 @@ const AvatarCreation = () => {
       console.error("Error fetching avatar parts:", error);
     }
   };
-
-  useEffect(() => {
-    if (head || eyes || mouth) {
-      setPreviewImage(`http://image-composer.com/compose?head=${head}&eyes=${eyes}&mouth=${mouth}`);
-    } else {
-      setPreviewImage("/placeholder-avatar.png");
-    }
-  }, [head, eyes, mouth]);
-
+  
   const handleSaveAvatar = async () => {
     try {
       const userId = 1;
-      const avatarParts = [head, eyes, mouth].filter(Boolean); //Filter for empty
-
+      const avatarParts = [head, eyes, mouth].filter(Boolean);
+  
       const response = await api.post("/avatar/user-avatar", {
         userId,
         avatarParts,
       });
-
-      console.log(response);
+  
+      console.log(response.data.link);
+      setPreviewImage(response.data.link)
     } catch (error) {
       console.error("Error saving avatar:", error);
       alert("Failed to save avatar. Please try again.");
     }
   };
+  
 
   return (
     <Flex>
@@ -70,7 +64,7 @@ const AvatarCreation = () => {
                     {avatarParts
                       .filter((part) => part.type === "head")
                       .map((part) => (
-                        <option key={part._id} value={part.imageUrl}>
+                        <option key={part._id} value={part._id}>
                           {part.name}
                         </option>
                       ))}
@@ -86,7 +80,7 @@ const AvatarCreation = () => {
                     {avatarParts
                       .filter((part) => part.type === "eyes")
                       .map((part) => (
-                        <option key={part._id} value={part.imageUrl}>
+                        <option key={part._id} value={part._id}>
                           {part.name}
                         </option>
                       ))}
@@ -102,7 +96,7 @@ const AvatarCreation = () => {
                     {avatarParts
                       .filter((part) => part.type === "mouth")
                       .map((part) => (
-                        <option key={part._id} value={part.imageUrl}>
+                        <option key={part._id} value={part._id}>
                           {part.name}
                         </option>
                       ))}

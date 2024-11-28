@@ -24,7 +24,7 @@
     transition: opacity 0.3s;
 }
   
-  .navLinks button:hover {
+.navLinks button:hover {
     opacity: 0.8;
 }
   
