@@ -15,22 +15,19 @@ const LoginForm = () => {
         e.preventDefault();
 
         try {
-            const requestData = {
-                email: email,
-                password: password
-            };
 
-            const response = await api.post('/users/login', requestData);
-
-            if (response.status === 200) {
+            const response = await api.post('/users/login', {email: email, password: password});
+            
+            if (response.data.token) {
+                localStorage.setItem('token', response.data.token)
                 toast({
                     title: 'Successfully Logged In',
                     status: 'success',
                     duration: 5000,
                     isClosable: true,
                 });
+                navigate('/');
             }
-            navigate('/');
         } catch (error) {
             const errorMessage = error.response?.data?.message || "Internal Server Error";
             toast({

@@ -4,6 +4,7 @@ import NavBar from "../../components/NavBar";
 import Header from "../../components/Header";
 import { Box, Flex, Text, Button, Select, Image } from "@chakra-ui/react";
 import styles from "./AvatarCreation.module.css";
+import {jwtDecode} from "jwt-decode";
 
 const AvatarCreation = () => {
   const [head, setHead] = useState("");
@@ -24,19 +25,24 @@ const AvatarCreation = () => {
       console.error("Error fetching avatar parts:", error);
     }
   };
-  
+
   const handleSaveAvatar = async () => {
     try {
-      const userId = 1;
-      const avatarParts = [head, eyes, mouth].filter(Boolean);
+      const token = localStorage.getItem("token");
+      if (!token) {
+        alert("No token found. Please log in.");
+        return;
+      }
+  
+      const decoded = jwtDecode(token);
+      const userId = decoded.id;
   
       const response = await api.post("/avatar/user-avatar", {
         userId,
-        avatarParts,
+        avatarParts: [head, eyes, mouth],
       });
   
-      console.log(response.data.link);
-      setPreviewImage(response.data.link)
+      setPreviewImage(response.data.link);
     } catch (error) {
       console.error("Error saving avatar:", error);
       alert("Failed to save avatar. Please try again.");
