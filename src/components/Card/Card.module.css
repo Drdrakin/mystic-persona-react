@@ -5,6 +5,7 @@
     padding: 20px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
 }
   
 .card:hover {
@@ -43,7 +44,20 @@
     transition: background-color 0.3s;
 }
   
-  .cardButton:hover {
+.cardButton:hover {
     background-color: #540a9d !important;
 }
-  
+
+.cardIcon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 2rem;
+    color: #540a9d;
+    cursor: pointer;
+}
+
+.cardIcon:hover {
+    transform: translateY(-2px);
+    color: #e01a1a;
+}
