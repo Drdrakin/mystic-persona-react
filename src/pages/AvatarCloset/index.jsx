@@ -159,7 +159,7 @@ const AvatarCloset = () => {
                   // the props receives the result of the funciton, not the function itself
                   // another way to do it would be to pass the function without params, as pass the params as props
                   // this way it is easier and simpler and more readable.                   
-                  downloadHandler={() => downloadHandler(avatar.imageUrl)}
+                  onClick={() => downloadHandler(avatar.imageUrl)}
                   deleteHandler={() => deleteHandler(avatar._id)}
                   editHandler={() => editHandler(avatar._id)}
                   buttonText="Download Avatar"

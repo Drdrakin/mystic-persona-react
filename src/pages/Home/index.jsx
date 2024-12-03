@@ -4,8 +4,12 @@ import NavBar from "../../components/NavBar";
 import Header from "../../components/Header";
 import Card from "../../components/Card";
 import styles from "./Home.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+  const navigate = useNavigate();
+
   return (
     <Flex className={styles.homePage}>
       <NavBar />
@@ -15,28 +19,20 @@ const Home = () => {
 
         <Text className={styles.pageTitle}>Explore your Options</Text>
         
-        <Box className={styles.mainSection}>
-
+        <Box className={styles.cardSection}>
           <Card
-            image="/avatar-preview1.png"
-            title="Avatar Preview"
-            description="View and customize your avatar in real time!"
+            image="images/icons8-create-100.png"
+            title="Avatar Creation"
+            description="Create new Avatars so you can use however you like"
             buttonText="Try Now"
-            onClick={() => alert("Go to Avatar Preview")}
+            onClick={() => navigate('/creation')}
           />
           <Card
-            image="/avatar-preview2.png"
+            image="images/icons8-hanger-100.png"
             title="Outfits Closet"
-            description="Browse through a collection of outfits and accessories."
+            description="Browse through your collection of saved Avatars"
             buttonText="Explore Closet"
-            onClick={() => alert("Go to Closet")}
-          />
-          <Card
-            image="/avatar-preview3.png"
-            title="Create Avatar"
-            description="Start from scratch and build your dream avatar!"
-            buttonText="Start Creating"
-            onClick={() => alert("Go to Create")}
+            onClick={() => navigate('/closet')}
           />
         </Box>
       </Box>

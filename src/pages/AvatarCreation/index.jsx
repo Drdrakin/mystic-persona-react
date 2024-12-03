@@ -32,24 +32,13 @@ const AvatarCreation = () => {
 
       const response = await api.get(`/avatar/user-avatar/${avatarId}`);
       const avatar = response.data;
-  
-      // Verifique os valores de avatarParts e avatar.avatarParts
-      console.log("avatarParts:", avatarParts);  // Logs dos avatarParts disponíveis
-      console.log("avatar.avatarParts:", avatar.avatarParts);  // Logs dos avatarParts retornados
-  
-      // Verifique o tipo de dado de _id
-      console.log("Tipo de _id da primeira parte:", typeof avatar.avatarParts[0]?._id);
-      
+        
       const headPart = avatarParts.find(part => part._id === avatar.avatarParts[0]?._id);
       const eyesPart = avatarParts.find(part => part._id === avatar.avatarParts[1]?._id);
       const mouthPart = avatarParts.find(part => part._id === avatar.avatarParts[2]?._id);
   
-      // Log para verificar se as partes foram encontradas corretamente
-      console.log("headPart:", headPart);
-      console.log("eyesPart:", eyesPart);
-      console.log("mouthPart:", mouthPart);
   
-      // Atualize o estado com os IDs das partes
+      // If it fails to set the _id falls back to none instead of throwing error
       setHead(headPart?._id || "");
       setEyes(eyesPart?._id || "");
       setMouth(mouthPart?._id || "");

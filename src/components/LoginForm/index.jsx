@@ -26,7 +26,7 @@ const LoginForm = () => {
                     duration: 5000,
                     isClosable: true,
                 });
-                navigate('/');
+                navigate('/home');
             }
         } catch (error) {
             const errorMessage = error.response?.data?.message || "Internal Server Error";

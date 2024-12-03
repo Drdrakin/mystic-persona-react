@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 50px;
-    background: linear-gradient(to right, #6a0dad, #ff8a65);
+    background: linear-gradient(to left, #6a0dad, #ff8a65);
     color: white;
 }
 
@@ -22,9 +22,10 @@
 }
 
 .ctaButton {
-    background: #ff8a65 !important;
+    background: #6a0dad !important;
     color: white !important;
-    padding: 10px 20px !important;
+    font-size: 1.5em !important;
+    padding: 30px 50px !important;
     border: none;
     cursor: pointer;
     transition: background 0.3s !important;
@@ -35,8 +36,9 @@
 }
 
 .heroImage {
-    width: 400px;
+    width: 100px;
     height: auto;
+
 }
 
 .stepSection {
@@ -56,38 +58,21 @@
     max-width: 250px;
 }
 
+.secondarySection{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
 .stepImage {
-    width: 100%;
+    margin: 0 auto;
+    width: 100px;
     border-radius: 10px;
     margin-bottom: 15px;
 }
 
-.benefitsSection {
-    display: flex;
-    align-items: center;
-    padding: 50px;
-    background: #fff;
+.navIcon{
+    display: inline-block;
+    width: 50px;
+    margin-bottom: -5px;
 }
-
-.benefitsImage {
-    width: 50%;
-    height: auto;
-}
-
-.benefitsContent {
-    max-width: 50%;
-    }
-
-.secondaryButton {
-    background: #6a0dad !important;
-    color: white !important;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.secondaryButton:hover {
-    background: #571188 !important;
-}
-  

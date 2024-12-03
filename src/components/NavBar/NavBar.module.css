@@ -27,10 +27,16 @@
 .navItem:hover {
     color: #6a0dad;
 }
-  
+ 
+.navIcon{
+    display: inline-block;
+    width: 35px;
+    margin-bottom: -5px;
+}
+
 .placeholder {
     margin-top: 20px;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: #999;
     font-style: italic;
 }

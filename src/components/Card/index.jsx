@@ -10,7 +10,7 @@ const Card = ({
   description, 
   buttonText, 
   icon,
-  downloadHandler, 
+  onClick, 
   deleteHandler, 
   editHandler
 }) => {
@@ -33,7 +33,7 @@ const Card = ({
         {title}
       </Heading>
       <Text className={styles.cardDescription}>{description}</Text>
-      <Button className={styles.cardButton} onClick={downloadHandler}>
+      <Button className={styles.cardButton} onClick={onClick}>
         {buttonText}
       </Button>
     </Box>
