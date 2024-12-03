@@ -5,6 +5,7 @@ import Register from "../pages/Register";
 import Login from "../pages/Login";
 import AvatarCreation from '../pages/AvatarCreation'
 import AvatarCloset from "../pages/AvatarCloset";
+import ProtectedRoute from '../context/ProtectedRoute';
 
 const router = createBrowserRouter([
     {
@@ -25,15 +26,15 @@ const router = createBrowserRouter([
     },
     {
         path: "/creation",
-        element: <AvatarCreation/>
+        element: <ProtectedRoute element={<AvatarCreation/>}/>
     },
     {
         path: "/creation/:avatarId",
-        element: <AvatarCreation/>
+        element: <ProtectedRoute element={<AvatarCreation/>}/>
     },
     {
         path: "/closet",
-        element: <AvatarCloset/>
+        element: <ProtectedRoute element={<AvatarCloset/>}/>
     }
 ]) 
 
