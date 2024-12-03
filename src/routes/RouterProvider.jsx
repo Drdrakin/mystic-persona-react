@@ -28,6 +28,10 @@ const router = createBrowserRouter([
         element: <AvatarCreation/>
     },
     {
+        path: "/creation/:avatarId",
+        element: <AvatarCreation/>
+    },
+    {
         path: "/closet",
         element: <AvatarCloset/>
     }

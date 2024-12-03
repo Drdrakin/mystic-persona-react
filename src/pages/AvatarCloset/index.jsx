@@ -7,11 +7,13 @@ import { jwtDecode } from "jwt-decode";
 import Card from "../../components/Card";
 import api from "../../api";
 import { AiFillDelete } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 const AvatarCloset = () => {
   const [avatars, setAvatars] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const navigate = useNavigate();
   const toast = useToast();
 
   // Gets the jwt from localstorage again and fetches the saved useravatars using userId
@@ -47,9 +49,9 @@ const AvatarCloset = () => {
 
   // Fetches image as a blob in memory, converts to usable format,
   // then creates a html <a> tag with the download attribute, downloads and discards
-  const downloadHandler = async (signedUrl) => {
+  const downloadHandler = async (imageUrl) => {
     try {
-      const response = await fetch(signedUrl);
+      const response = await fetch(imageUrl);
       if (!response.ok) {
         toast({
           duration: 2000,
@@ -98,11 +100,40 @@ const AvatarCloset = () => {
         duration: 2000,
         status: 'error',
         title: 'Failed to download image',
-        description: error.message,
+        description: error.response?.data?.message || "Something went wrong"
+      });
+    }
+  };
+
+  const deleteHandler = async (avatarId) => {
+    try {
+      const response = await api.delete(`/avatar/user-avatar/${avatarId}`);
+
+      if (response.status == 200){
+        toast({
+          title: "Deleted Successfully",
+          description: "The avatar was successfully deleted.",
+          status: "success",
+          duration: 3000,
+        });
+      }
+      
+      // Removes dinamically from the state without reloading the data
+      setAvatars((prevAvatars) => prevAvatars.filter((avatar) => avatar._id !== avatarId));  
+    } catch (error) {
+      console.error("Error deleting avatar:", error);
+      toast({
+        title: "Failed to delete avatar",
+        description: error.response?.data?.message || "Something went wrong",
+        status: "error",
+        duration: 3000,
       });
     }
   };
   
+  const editHandler = (avatarId) => {
+    navigate(`/creation/${avatarId}`);
+  };
   
   return (
     <Flex>
@@ -128,8 +159,10 @@ const AvatarCloset = () => {
                   // the props receives the result of the funciton, not the function itself
                   // another way to do it would be to pass the function without params, as pass the params as props
                   // this way it is easier and simpler and more readable.                   
-                  downloadHandler={() => downloadHandler(avatar.imageUrl)} 
-                  buttonText="Download Avatar" // Maybe another icon also
+                  downloadHandler={() => downloadHandler(avatar.imageUrl)}
+                  deleteHandler={() => deleteHandler(avatar._id)}
+                  editHandler={() => editHandler(avatar._id)}
+                  buttonText="Download Avatar"
                   icon={AiFillDelete}
                 />
               ))
